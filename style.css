@@ -1,0 +1,1276 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* =========================
+   BASIC SETTINGS
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #fffaf5;
+    color: #49352d;
+    line-height: 1.7;
+}
+
+img {
+    max-width: 100%;
+}
+
+a {
+    text-decoration: none;
+}
+
+button {
+    font-family: inherit;
+}
+
+/* =========================
+   NAVIGATION
+========================= */
+
+.navbar {
+    width: 100%;
+    height: 78px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 7%;
+
+    background: rgba(255, 250, 245, 0.97);
+
+    position: sticky;
+    top: 0;
+    z-index: 999;
+
+    box-shadow: 0 3px 20px rgba(70, 40, 25, 0.10);
+}
+
+.logo {
+    font-family: 'DM Serif Display', serif;
+    font-size: 28px;
+    color: #5a3528;
+    white-space: nowrap;
+}
+
+.logo span {
+    color: #b9854f;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 22px;
+}
+
+nav a {
+    color: #594137;
+    font-size: 14px;
+    font-weight: 500;
+
+    padding: 8px 4px;
+
+    transition: 0.3s;
+}
+
+nav a:hover,
+nav a.active {
+    color: #a15d3f;
+}
+
+.menu-btn {
+    display: none;
+
+    border: none;
+    background: transparent;
+
+    font-size: 28px;
+    color: #654235;
+
+    cursor: pointer;
+}
+
+/* =========================
+   HERO HOME
+========================= */
+
+.hero {
+    min-height: 680px;
+
+    display: flex;
+    align-items: center;
+
+    padding: 80px 8%;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(48, 28, 20, 0.78),
+            rgba(48, 28, 20, 0.35),
+            rgba(48, 28, 20, 0.12)
+        ),
+        url("https://images.unsplash.com/photo-1599661046289-e31897846e41?auto=format&fit=crop&w=1800&q=85");
+
+    background-size: cover;
+    background-position: center;
+}
+
+.hero-content {
+    max-width: 720px;
+    color: white;
+
+    animation: fadeUp 1s ease;
+}
+
+.small-title {
+    color: #e6bd82;
+    letter-spacing: 4px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.hero h1 {
+    font-family: 'DM Serif Display', serif;
+
+    font-size: clamp(55px, 8vw, 95px);
+
+    line-height: 1.05;
+
+    margin: 20px 0;
+}
+
+.hero h1 span {
+    display: block;
+    color: #e4b978;
+}
+
+.hero-content > p:not(.small-title) {
+    max-width: 620px;
+
+    font-size: 16px;
+
+    color: #fff5ed;
+
+    margin-bottom: 30px;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+/* =========================
+   BUTTONS
+========================= */
+
+.btn {
+    display: inline-block;
+
+    padding: 13px 25px;
+
+    background: #754633;
+    color: white;
+
+    border-radius: 30px;
+
+    font-size: 14px;
+    font-weight: 500;
+
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #a66a49;
+    transform: translateY(-3px);
+}
+
+.btn-outline {
+    display: inline-block;
+
+    padding: 12px 24px;
+
+    border: 1px solid #e2b878;
+
+    color: white;
+
+    border-radius: 30px;
+
+    font-size: 14px;
+
+    transition: 0.3s;
+}
+
+.btn-outline:hover {
+    background: #e2b878;
+    color: #49352d;
+}
+
+/* =========================
+   INTRO
+========================= */
+
+.intro {
+    max-width: 850px;
+
+    margin: auto;
+
+    padding: 100px 25px;
+
+    text-align: center;
+}
+
+.section-tag {
+    color: #aa704d;
+
+    font-size: 12px;
+
+    letter-spacing: 3px;
+
+    font-weight: 600;
+}
+
+.intro h2,
+.section-heading h2,
+.content-section h2,
+.food-section > h2 {
+    font-family: 'DM Serif Display', serif;
+
+    color: #59392d;
+
+    font-size: 46px;
+
+    line-height: 1.2;
+
+    margin: 12px 0 20px;
+}
+
+.intro p:not(.section-tag) {
+    color: #766057;
+
+    margin-bottom: 15px;
+}
+
+/* =========================
+   HIGHLIGHTS
+========================= */
+
+.highlights {
+    background: #f5e7db;
+
+    padding: 90px 7%;
+}
+
+.section-heading {
+    text-align: center;
+
+    margin-bottom: 45px;
+}
+
+.highlight-grid {
+    max-width: 1200px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 22px;
+}
+
+.highlight-card {
+    background: #fffaf5;
+
+    padding: 35px 28px;
+
+    border-radius: 18px;
+
+    color: #49352d;
+
+    box-shadow: 0 8px 25px rgba(70, 40, 25, 0.07);
+
+    transition: 0.35s;
+}
+
+.highlight-card:hover {
+    transform: translateY(-8px);
+
+    box-shadow: 0 15px 35px rgba(70, 40, 25, 0.14);
+}
+
+.highlight-icon {
+    font-size: 42px;
+
+    margin-bottom: 15px;
+}
+
+.highlight-card h3 {
+    font-family: 'DM Serif Display', serif;
+
+    font-size: 25px;
+
+    color: #633f31;
+
+    margin-bottom: 8px;
+}
+
+.highlight-card p {
+    color: #806b60;
+
+    font-size: 14px;
+
+    margin-bottom: 15px;
+}
+
+.highlight-card span {
+    color: #a45e3f;
+
+    font-size: 13px;
+
+    font-weight: 600;
+}
+
+/* =========================
+   QUOTE
+========================= */
+
+.quote {
+    padding: 100px 20px;
+
+    text-align: center;
+
+    background:
+        linear-gradient(
+            rgba(75, 45, 33, 0.90),
+            rgba(75, 45, 33, 0.90)
+        ),
+        url("https://images.unsplash.com/photo-1477587458883-47145ed94245?auto=format&fit=crop&w=1800&q=85");
+
+    background-size: cover;
+    background-position: center;
+
+    color: white;
+}
+
+.quote h2 {
+    max-width: 800px;
+
+    margin: auto;
+
+    font-family: 'DM Serif Display', serif;
+
+    font-size: 42px;
+
+    font-weight: 400;
+}
+
+.quote p {
+    margin-top: 20px;
+
+    color: #dfb77e;
+
+    letter-spacing: 2px;
+}
+
+/* =========================
+   PAGE BANNER
+========================= */
+
+.page-banner {
+    padding: 95px 20px;
+
+    text-align: center;
+
+    background:
+        linear-gradient(
+            rgba(90, 54, 39, 0.88),
+            rgba(90, 54, 39, 0.88)
+        ),
+        url("https://images.unsplash.com/photo-1603262110263-fb0112e7cc33?auto=format&fit=crop&w=1800&q=85");
+
+    background-size: cover;
+    background-position: center;
+
+    color: white;
+}
+
+.page-banner .section-tag {
+    color: #e2b879;
+}
+
+.page-banner h1 {
+    font-family: 'DM Serif Display', serif;
+
+    font-size: clamp(45px, 7vw, 70px);
+
+    color: white;
+
+    margin: 10px 0;
+}
+
+.page-banner p:last-child {
+    color: #f3e2d5;
+}
+
+/* =========================
+   GENERAL CONTENT
+========================= */
+
+.content-section {
+    max-width: 950px;
+
+    margin: auto;
+
+    padding: 90px 25px;
+}
+
+.content-section h2 {
+    margin-top: 40px;
+}
+
+.content-section h2:first-child {
+    margin-top: 0;
+}
+
+.content-section p {
+    color: #725c51;
+
+    margin: 12px 0;
+
+    line-height: 1.9;
+}
+
+.info-box {
+    margin-top: 40px;
+
+    padding: 25px;
+
+    background: #f4e4d7;
+
+    border-left: 5px solid #aa704d;
+
+    border-radius: 10px;
+}
+
+.info-box strong {
+    color: #633e30;
+}
+
+.info-box p {
+    margin-bottom: 0;
+}
+
+/* =========================
+   PLACES
+========================= */
+
+.place-grid {
+    max-width: 1200px;
+
+    margin: auto;
+
+    padding: 90px 7%;
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 25px;
+}
+
+.place-card {
+    background: white;
+
+    padding: 35px 28px;
+
+    border-radius: 18px;
+
+    border-bottom: 4px solid #b9855c;
+
+    box-shadow: 0 8px 25px rgba(70, 40, 25, 0.07);
+
+    transition: 0.35s;
+}
+
+.place-card:hover {
+    transform: translateY(-8px);
+}
+
+.place-icon {
+    font-size: 48px;
+
+    margin-bottom: 15px;
+}
+
+.place-card h2 {
+    font-family: 'DM Serif Display', serif;
+
+    color: #603f31;
+
+    font-size: 27px;
+
+    margin-bottom: 10px;
+}
+
+.place-card p {
+    color: #806a5f;
+
+    font-size: 14px;
+}
+
+/* =========================
+   FOOD
+========================= */
+
+.food-section {
+    max-width: 1200px;
+
+    margin: auto;
+
+    padding: 90px 7%;
+}
+
+.food-section > h2 {
+    text-align: center;
+
+    margin-bottom: 35px;
+}
+
+.food-title {
+    margin-top: 85px !important;
+}
+
+.food-grid {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 22px;
+}
+
+.food-card {
+    background: #fff;
+
+    padding: 35px 25px;
+
+    text-align: center;
+
+    border-radius: 18px;
+
+    box-shadow: 0 8px 25px rgba(70, 40, 25, 0.07);
+
+    transition: 0.3s;
+}
+
+.food-card:hover {
+    transform: translateY(-7px);
+}
+
+.food-icon {
+    font-size: 50px;
+
+    margin-bottom: 15px;
+}
+
+.food-card h3 {
+    font-family: 'DM Serif Display', serif;
+
+    font-size: 26px;
+
+    color: #633f30;
+
+    margin-bottom: 8px;
+}
+
+.food-card p {
+    color: #806a5f;
+
+    font-size: 14px;
+}
+
+/* =========================
+   RECIPE
+========================= */
+
+.recipe-box {
+    max-width: 850px;
+
+    margin: 45px auto 0;
+
+    padding: 35px;
+
+    background: #f5e7db;
+
+    border-radius: 20px;
+}
+
+.recipe-box h3 {
+    font-family: 'DM Serif Display', serif;
+
+    font-size: 28px;
+
+    color: #623f30;
+
+    margin-bottom: 20px;
+}
+
+.recipe-box p {
+    margin: 10px 0;
+}
+
+.recipe-box ol {
+    padding-left: 25px;
+
+    color: #765f53;
+}
+
+.recipe-box li {
+    margin: 8px 0;
+}
+
+/* =========================
+   CULTURE
+========================= */
+
+.festival-grid {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 20px;
+
+    margin-top: 30px;
+}
+
+.festival-card {
+    padding: 25px;
+
+    background: #f7e9dc;
+
+    border-radius: 15px;
+}
+
+.festival-card h3 {
+    font-family: 'DM Serif Display', serif;
+
+    font-size: 25px;
+
+    color: #654131;
+}
+
+.festival-card p {
+    font-size: 14px;
+}
+
+/* =========================
+   MARBLE
+========================= */
+
+.marble-steps {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 18px;
+
+    margin: 40px 0;
+}
+
+.marble-steps > div {
+    padding: 25px;
+
+    background: #f4eee9;
+
+    border-radius: 15px;
+
+    text-align: center;
+}
+
+.marble-steps span {
+    display: inline-flex;
+
+    width: 48px;
+    height: 48px;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #705044;
+
+    color: white;
+
+    margin-bottom: 12px;
+
+    font-weight: 600;
+}
+
+.marble-steps h3 {
+    font-family: 'DM Serif Display', serif;
+
+    font-size: 22px;
+
+    color: #604033;
+
+    margin-bottom: 8px;
+}
+
+.marble-steps p {
+    font-size: 13px;
+}
+
+/* =========================
+   GALLERY
+========================= */
+
+.gallery-section {
+    max-width: 1250px;
+
+    margin: auto;
+
+    padding: 80px 7%;
+}
+
+.gallery-filter {
+    display: flex;
+
+    justify-content: center;
+
+    flex-wrap: wrap;
+
+    gap: 10px;
+
+    margin-bottom: 45px;
+}
+
+.gallery-filter button {
+    border: 1px solid #b88769;
+
+    background: transparent;
+
+    color: #684536;
+
+    padding: 9px 19px;
+
+    border-radius: 25px;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.gallery-filter button:hover {
+    background: #704837;
+
+    color: white;
+}
+
+.gallery-grid {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 22px;
+}
+
+.gallery-item {
+    position: relative;
+
+    overflow: hidden;
+
+    min-height: 300px;
+
+    border-radius: 17px;
+
+    background: #ead8ca;
+
+    box-shadow: 0 8px 25px rgba(70, 40, 25, 0.10);
+
+    transition: 0.4s;
+}
+
+.gallery-item:hover {
+    transform: translateY(-7px);
+}
+
+.gallery-item img {
+    width: 100%;
+
+    height: 350px;
+
+    object-fit: cover;
+
+    display: block;
+
+    transition: 0.5s;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.07);
+}
+
+.gallery-caption {
+    position: absolute;
+
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    padding: 45px 20px 20px;
+
+    color: white;
+
+    background:
+        linear-gradient(
+            transparent,
+            rgba(30, 18, 13, 0.95)
+        );
+}
+
+.gallery-caption h3 {
+    font-family: 'DM Serif Display', serif;
+
+    font-size: 25px;
+}
+
+.gallery-caption p {
+    font-size: 12px;
+
+    color: #e6d8cf;
+}
+
+/* =========================
+   CONTACT
+========================= */
+
+.contact-section {
+    max-width: 1100px;
+
+    margin: auto;
+
+    padding: 90px 25px;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 60px;
+
+    align-items: center;
+}
+
+.contact-info h2 {
+    font-family: 'DM Serif Display', serif;
+
+    font-size: 45px;
+
+    color: #59392d;
+
+    margin-bottom: 15px;
+}
+
+.contact-info > p {
+    color: #766056;
+
+    margin-bottom: 25px;
+}
+
+.contact-card {
+    display: flex;
+
+    align-items: center;
+
+    gap: 18px;
+
+    background: white;
+
+    padding: 20px;
+
+    margin-bottom: 15px;
+
+    border-radius: 15px;
+
+    box-shadow: 0 6px 20px rgba(70, 40, 25, 0.07);
+}
+
+.contact-icon {
+    font-size: 30px;
+}
+
+.contact-card h3 {
+    color: #5f3d30;
+
+    margin-bottom: 3px;
+}
+
+.contact-card p {
+    color: #806a5f;
+
+    font-size: 14px;
+}
+
+.contact-decoration {
+    min-height: 400px;
+
+    background:
+        linear-gradient(
+            rgba(101, 64, 48, 0.08),
+            rgba(101, 64, 48, 0.08)
+        ),
+        #ead9cb;
+
+    border-radius: 30px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+}
+
+.cake-big {
+    font-size: 100px;
+
+    margin-bottom: 20px;
+}
+
+.contact-decoration h3 {
+    font-family: 'DM Serif Display', serif;
+
+    font-size: 38px;
+
+    color: #654132;
+}
+
+.contact-decoration p {
+    color: #806457;
+
+    margin-top: 10px;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    padding: 55px 7% 25px;
+
+    background: #49332a;
+
+    color: white;
+
+    text-align: center;
+}
+
+footer h2 {
+    font-family: 'DM Serif Display', serif;
+
+    color: #e4b978;
+
+    font-size: 32px;
+
+    margin-bottom: 5px;
+}
+
+footer p {
+    color: #d9c3b7;
+
+    font-size: 13px;
+
+    margin: 5px;
+}
+
+.footer-content {
+    max-width: 1100px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: 2fr 1fr 1fr;
+
+    gap: 40px;
+
+    text-align: left;
+
+    padding-bottom: 35px;
+}
+
+.footer-content h2 {
+    margin-top: 0;
+}
+
+.footer-links {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 7px;
+}
+
+.footer-links h3 {
+    color: #e2b879;
+
+    margin-bottom: 5px;
+}
+
+.footer-links a {
+    color: #d8c4b9;
+
+    font-size: 13px;
+
+    transition: 0.3s;
+}
+
+.footer-links a:hover {
+    color: white;
+}
+
+.copyright {
+    border-top: 1px solid rgba(255,255,255,0.15);
+
+    padding-top: 20px;
+
+    margin-top: 10px;
+}
+
+/* =========================
+   ANIMATIONS
+========================= */
+
+@keyframes fadeUp {
+
+    from {
+        opacity: 0;
+
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+
+        transform: translateY(0);
+    }
+}
+
+.highlight-card,
+.place-card,
+.food-card,
+.festival-card,
+.marble-steps > div,
+.gallery-item {
+    animation: fadeUp 0.7s ease both;
+}
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 1000px) {
+
+    nav {
+        gap: 13px;
+    }
+
+    nav a {
+        font-size: 12px;
+    }
+
+    .highlight-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .place-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .food-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .marble-steps {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 750px) {
+
+    .navbar {
+        height: 70px;
+
+        padding: 0 5%;
+    }
+
+    .logo {
+        font-size: 24px;
+    }
+
+    .menu-btn {
+        display: block;
+    }
+
+    nav {
+        display: none;
+
+        position: absolute;
+
+        top: 70px;
+        left: 0;
+
+        width: 100%;
+
+        padding: 20px;
+
+        background: #fffaf5;
+
+        flex-direction: column;
+
+        gap: 12px;
+
+        box-shadow: 0 10px 20px rgba(0,0,0,0.10);
+    }
+
+    nav.show {
+        display: flex;
+    }
+
+    nav a {
+        width: 100%;
+
+        text-align: center;
+
+        padding: 10px;
+    }
+
+    .hero {
+        min-height: 600px;
+
+        padding: 50px 7%;
+
+        background-position: center;
+    }
+
+    .hero h1 {
+        font-size: 55px;
+    }
+
+    .intro {
+        padding: 70px 20px;
+    }
+
+    .intro h2,
+    .section-heading h2,
+    .content-section h2,
+    .food-section > h2 {
+        font-size: 38px;
+    }
+
+    .highlight-grid,
+    .place-grid,
+    .food-grid,
+    .gallery-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .festival-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .marble-steps {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-section {
+        grid-template-columns: 1fr;
+
+        gap: 35px;
+    }
+
+    .contact-decoration {
+        min-height: 330px;
+    }
+
+    .footer-content {
+        grid-template-columns: 1fr;
+
+        text-align: center;
+    }
+
+    .footer-links {
+        align-items: center;
+    }
+
+    .quote h2 {
+        font-size: 32px;
+    }
+}
+
+/* =========================
+   SMALL PHONES
+========================= */
+
+@media (max-width: 450px) {
+
+    .hero h1 {
+        font-size: 45px;
+    }
+
+    .hero-content > p:not(.small-title) {
+        font-size: 14px;
+    }
+
+    .page-banner {
+        padding: 75px 20px;
+    }
+
+    .page-banner h1 {
+        font-size: 42px;
+    }
+
+    .gallery-section,
+    .food-section,
+    .place-grid {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+    .gallery-item img {
+        height: 300px;
+    }
+
+    .contact-info h2 {
+        font-size: 38px;
+    }
+
+    .quote {
+        padding: 75px 20px;
+    }
+
+    .quote h2 {
+        font-size: 28px;
+    }
+}
